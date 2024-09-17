@@ -1,0 +1,7 @@
+Task:
+Implement Concurrency : Producer-Consumer ProblemImplement the Producer-Consumer problem using threads to handle concurrent tasks, but with a twist: consumers must process different types of tasks with varying priorities.
+Implement a mechanism that dynamically prioritizes tasks, ensuring critical tasks are handled first without starving lower-priority tasks. This may require the use of thread pools and priority queues.
+
+Solution:
+
+The approach uses a PriorityBlockingQueue to manage tasks with varying priorities, ensuring that high-priority tasks are processed first. A fixed-size thread pool, created with Executors.newFixedThreadPool, allows multiple threads to concurrently process tasks from the queue. Tasks are produced and added to the queue, while worker threads continuously consume and process them. The system includes a graceful shutdown mechanism to terminate the thread pool and ensure all tasks are completed or properly handled.

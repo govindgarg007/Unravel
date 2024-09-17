@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Concurrency/Concurrency.iml" filepath="$PROJECT_DIR$/Concurrency/Concurrency.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Database/Database.iml" filepath="$PROJECT_DIR$/Database/Database.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Deadlock/Deadlock.iml" filepath="$PROJECT_DIR$/Deadlock/Deadlock.iml" />
       <module fileurl="file://$PROJECT_DIR$/Memory Management/Memory Management.iml" filepath="$PROJECT_DIR$/Memory Management/Memory Management.iml" />
       <module fileurl="file://$PROJECT_DIR$/Session Management/Session Management.iml" filepath="$PROJECT_DIR$/Session Management/Session Management.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Unravel.iml" filepath="$PROJECT_DIR$/.idea/Unravel.iml" />

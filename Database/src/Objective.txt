@@ -1,0 +1,13 @@
+Optimize Database Connection Pooling : The system faces issues with database
+connections under high concurrency, particularly during peak loads. You are required
+to use HikariCP for database connection pooling, but you must also implement a
+custom monitoring solution that logs when connections are waiting too long or are
+being underutilized. Your solution should optimize pool size based on usage patterns,
+and avoid simply increasing the pool size to resolve connection bottlenecks.
+
+
+Solution:
+To address database connection pooling issues under high concurrency, we will integrate HikariCP for efficient connection management. The DatabaseManager class will be updated to configure HikariCP with optimal settings, including a dynamic pool size based on usage patterns. We will implement a custom monitoring solution to log when connections are waiting excessively or are underutilized. This will involve periodically checking pool metrics and adjusting configuration parameters accordingly, rather than just increasing the pool size. This approach ensures improved performance and resource utilization during peak loads.
+
+
+Note: This code is designed to run exclusively within the Spring Boot framework due to the use of specific libraries integrated into the application.

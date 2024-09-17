@@ -1,0 +1,11 @@
+Task:
+Fix Deadlock in a Multi-Threaded Environment : There is a deadlock issue in the
+system caused by improper locking, which occurs only after a specific number of
+concurrent users interact with the system. The deadlock is difficult to reproduce
+consistently. You must analyze and optimize the locking mechanisms across multiple
+shared resources, while ensuring thread-safe operations. As an added challenge, the
+system includes third-party libraries that also utilize locks, so your solution should not
+break their functionality.
+
+Solution:
+To address the deadlock issue in the DeadlockSimulator class, we will implement a consistent locking order to prevent circular dependencies. Instead of attempting to acquire locks in an arbitrary order, we will define a global lock acquisition order (e.g., always acquire lock1 before lock2). This will prevent the possibility of deadlock by ensuring that all threads follow the same sequence when acquiring locks. We will also use tryLock() to attempt lock acquisition with timeouts, allowing threads to back off and retry if they cannot obtain all required locks. This approach ensures thread safety while accommodating the use of third-party libraries with their own locking mechanisms.

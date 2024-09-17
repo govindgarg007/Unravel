@@ -1,0 +1,15 @@
+Task:
+
+Fix the Session Management API : The provided REST API has thread safety and exception handling issues. However, session data is shared between microservices, requiring you to ensure thread safety across service boundaries. You need to synchronize session data between services and ensure proper error handling, while also avoiding potential bottlenecks in performance.
+
+Solution:
+
+To resolve the Session Management API task, I implemented a thread-safe solution by utilizing ConcurrentHashMap to store session data, which allows for concurrent access without the need for external synchronization. To further enhance thread safety, I used ReentrantLock for critical operations such as login and logout, ensuring that only one thread can modify session data at a time. This prevents race conditions and ensures data consistency across services.
+
+For error handling, I incorporated custom exception handling mechanisms, which capture and log errors, ensuring that the system remains stable and provides informative feedback to the user. By avoiding synchronized blocks and instead using fine-grained locking, I ensured that the solution remains efficient and minimizes bottlenecks under high concurrency. This approach guarantees both thread safety and performance optimization in a microservices architecture where session data is shared.
+
+
+
+
+
+

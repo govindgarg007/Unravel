@@ -1,0 +1,7 @@
+Task:
+
+Resolve Memory Management Issue : The system is experiencing memory leaks due to improper session data management. The memory issue arises sporadically, particularly under high user loads. You need to implement a strategy to track down the source of the leak (e.g., using heap dumps or profiling tools) and modify the session handling logic to resolve the issue. Additionally, implement a caching mechanism for session data to reduce memory pressure.
+
+Solution:
+
+To address memory management issues, particularly memory leaks in the context of session data management, we can implement a strategy using WeakHashMap to automatically handle sessions that are no longer referenced, thereby allowing them to be garbage collected. Additionally, implementing a session timeout mechanism can help manage inactive sessions.

@@ -22,6 +22,9 @@ This project requires several dependencies, including:
 3) HikariCP: For database connection pooling.
 4) Lombok: To reduce boilerplate code.
 5) MySQL Connector: To connect to a MySQL database.
+
+
+
  
 **IDE**
 IntelliJ : The IntelliJ IDE may be utilized to install all necessary dependencies automatically.

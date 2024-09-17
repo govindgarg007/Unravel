@@ -10,6 +10,9 @@ public class MemoryManager {
     // A WeakHashMap to store session data. Keys are session IDs and values are byte arrays representing session data.
     private final Map<String, byte[]> sessionData = new WeakHashMap<>();
 
+
+
+
     /**
      * Adds session data to the memory manager.
      * @param sessionId The unique identifier for the session.

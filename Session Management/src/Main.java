@@ -4,6 +4,9 @@ public class Main {
         // Create a SessionManager instance
         SessionManager sessionManager = new SessionManager();
 
+
+
+
         // Test login
         System.out.println(sessionManager.login("user1"));
 
